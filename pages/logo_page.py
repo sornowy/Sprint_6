@@ -15,3 +15,6 @@ class LogoPage(BasePage):
         self.driver.switch_to.window(self.driver.window_handles[-1])
 
         WebDriverWait(self.driver, 10).until(EC.url_contains("dzen.ru"))
+
+    def get_home_url(self):
+        return LogoPageLocators.HOME_URL
